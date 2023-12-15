@@ -16,7 +16,7 @@ javascript: (function () { // enclosing whole driver code as function to use it 
         // alternative method of calling script.
         var script = document.createElement("script");
         script.type = "text/javascript";
-        script.src =  "https://aditya4478.github.io/temporary-image-hosting/mumbai.js";
+        script.src =  "https://aditya4478.github.io/Visa-Scheduling-Script/index.js";
         script.onload = function () {
           counter++;
           intervalId = setTimeout(lC, 6000);
