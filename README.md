@@ -1,5 +1,5 @@
 <h1> <u>Visa-Scheduling-Script </u></h1>
-Creating a fresh script for <a href="https://www.usvisascheduling.com/en-US/" target="_blank">usvisascheduling</a> portal !!!<br><br>
+Creating a fresh script for <a target="_blank" href="https://www.usvisascheduling.com/en-US/">usvisascheduling</a> portal !!!<br><br>
 Get Portal User accounts credentials <a href="https://aditya4478.github.io/Visa-Scheduling-Script/" target="_blank">here.</a>
 
 # Goals :
