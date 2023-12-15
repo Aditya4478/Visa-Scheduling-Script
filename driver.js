@@ -1,4 +1,5 @@
 javascript: (function () { // enclosing whole driver code as function to use it as bookmark
+  alert("Script Added");
   var counter = 0,intervalId,checkCalendar,greenDay;
   function lC() {
     if (counter < 500) {
