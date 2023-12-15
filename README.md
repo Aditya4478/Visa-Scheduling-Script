@@ -1,16 +1,17 @@
-# Visa-Scheduling-Script
-Creating a fresh script for https://www.usvisascheduling.com/en-US/ !!!
+<h1> <u>Visa-Scheduling-Script </u></h1>
+Creating a fresh script for <a href="https://www.usvisascheduling.com/en-US/" target="_blank">usvisascheduling</a> portal !!!<br><br>
+Get Portal User accounts credentials <a href="https://aditya4478.github.io/Visa-Scheduling-Script/" target="_blank">here.</a>
 
-<b> Goals : </b>
+# Goals :
 1) To remove static time functions & add synchronous logic for raw/index.js code (may be using promise..)
 2) To remove the driver code weak point of adding multiple script tags. It should only add once & then run the content of fetched script again & again. 
 3) After succesfully writng above 2 codes, write a new code for altering dropdown values & checking whether the calendar is fetched or not
 <br>(I have not addressed you about this, since it is very simple task & can be done later also.)
-<hr>
-<b> How to get started ? </b>
+
+# How to get started ?
 <h3>Automated way</h3>
 <ol>
-<li> Install extension from <a href="https://chromewebstore.google.com/detail/violentmonkey/jinjaccalgkegednnccohejagnlnfdag" target=”_blank”>here.</a> </li>
+<li> Install extension from <a href="https://chromewebstore.google.com/detail/violentmonkey/jinjaccalgkegednnccohejagnlnfdag" target="_blank">here.</a> </li>
 <li> After installing, Click on extension & add script by clicking '+' sign. In "@match" add the following value without quotes
    <br> "https://www.usvisascheduling.com/en-US/ofc-schedule/". Add the driver code from 10th line. (i.e. after "// ==/UserScript==")<br> Click save & close.</li>
 <li> Now, visit "https://www.usvisascheduling.com/en-US" & sign-in. When you click to reschedule/schedule appointment, the script will be added automaticaly.</li>
