@@ -31,7 +31,7 @@ setTimeout(function () {
                 if (greenDays.length > 0) {
                   
                     console.log("There are green days in the calendar.");
-                    let audio = new Audio('https://aditya4478.github.io/temporary-image-hosting/notification.mp3'); 
+                    let audio = new Audio('https://aditya4478.github.io/Visa-Scheduling-Script/notification.mp3'); 
                     audio.play(); // notify user
                     clickCounter = 100; // preventing the calendarContainer to get closed - check line 77 "if (clickCounter === 2)..." for more details
                     clearInterval(intervalId); // Ending Loop which is started to run checkAndClickNext() for infinite times on line 110
