@@ -40,7 +40,7 @@ Get Portal User accounts credentials <a href="https://aditya4478.github.io/Visa-
 
 # Use Cases (Vanshika - 3,4 | Ravi - 1,4 | Yashi - 2,4)
 1) Client Loads ofc-Schedule/ & press "a" in Keyboard. Client will be asked to enter number 'N' & text 'C'. Now, the loop will iterate on C for checking N months.<br>
-<b>Eg:</b> Client press 'a' & then popup occurs. Client enters '3<space>mumbai'. The loop will start for iterating mumbai in OFC. It will check dates for next 3 months. <br>
+<b>Eg:</b> Client press 'a' & then popup occurs. Client enters '3{space}mumbai'. The loop will start for iterating mumbai in OFC. It will check dates for next 3 months. <br>
 <b>Detailed - Flow :</b> Select value from city dropdown >> check wether the calendar is available or not >> If its available, start calnedar loop & check for dates.(i.e. check synchronously) >> Sometimes, few city will have no calendar. In such situations, the calendar loop should not start. >> Once the Calendar is checked / we came to know that the calendar doesn't exist, then reset City dropdown. >> Now again, the 2nd iteration will start and city will be selected... (Now onwards, no need to ask the value of N & C. Ask only value once).
 2) Similar to 1 but design it for consular-schedule/. Don't reset city if you don't find calendar. Directly move to next city.
 3) Client Loads ofc-Schedule/ & press "a" in keyboard. Client will be asked to enter number 'N'. Now, the loop will iterate on all city for N times.<br>
