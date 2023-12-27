@@ -57,7 +57,7 @@ setTimeout(function () {
                             // only if the TIME_SLOT was selected. As soon as time slot is selected, the Site will enable the Submit button :)
                             var submitButton = document.getElementById('submitbtn');
                             if (submitButton.attributes.disabled != undefined) {
-                                    submitButton.click();
+                                    // submitButton.click();
                                     console.log("Submit button clicked");
                                 }
                             }
