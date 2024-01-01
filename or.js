@@ -40,15 +40,24 @@ function checkCity(m){
         return new Promise((resolve, reject) => {
             function checkDatepickerClass() {
             let datepicker = document.getElementById('datepicker');
-                //let nullDates = document.getElementById('datepicker').value;
-                if(document.getElementById('datepicker').value == ''){
-                    if(cityIndex < 6){
-                        cityIndex++;
-                        checkCity(cityIndex);
+            if(eventListnerFlag == 1){
+                eventListnerFlag = 0;
+                //console.log("Event Key Listner added");
+                document.addEventListener("keydown", function (event) {
+                    if (event.key === "e" || event.key === "E") {
+                        waitForDatepickerClass = null
+                        checkCity = null;
+                        alert("User terminated script before dates found...");
                     }
-                    reject();
-                }
-                if (datepicker && datepicker.classList.contains('hasDatepicker')) {
+                });
+            }
+            //let nullDates = document.getElementById('datepicker').value;
+            if(document.getElementById('datepicker').value == ''){
+                if(cityIndex < 5){
+                    cityIndex++;
+                    checkCity(cityIndex);
+                }else{checkCity(1);}
+            }else if (datepicker && datepicker.classList.contains('hasDatepicker')) {
                     // Datepicker has the specified class
                     //console.log('Datepicker has the "hasDatepicker" class');
                     resolve();
@@ -121,10 +130,8 @@ function checkCity(m){
 
                                 if (greenDays.length === 0) {
                                     // Select the first option in the city_dropdown - that is reseting all values
-
                                     city_dropdown.selectedIndex = 0;
                                     city_dropdown.dispatchEvent(new Event("change"));
-
                                     datepicker = undefined;
                                     calendarContainer = undefined;
                                     nextButton = undefined;
