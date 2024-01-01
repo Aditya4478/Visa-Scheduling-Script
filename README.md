@@ -2,6 +2,9 @@
 Creating a fresh script for <a target="_blank" href="https://www.usvisascheduling.com/en-US/">usvisascheduling</a> portal !!!<br><br>
 Get Portal User accounts credentials <a href="https://aditya4478.github.io/Visa-Scheduling-Script/" target="_blank">here.</a>
 
+# Project Status as of 31/12/2023:
+All tasks are completed !!
+
 # Goals :
 1) To remove static time functions & add synchronous logic for raw/index.js code (may be using promise..)
 2) To remove the driver code weak point of adding multiple script tags. It should only add once & then run the content of fetched script again & again. 
@@ -41,14 +44,14 @@ Get Portal User accounts credentials <a href="https://aditya4478.github.io/Visa-
 # Use Cases (Vanshika - 3,4 | Ravi - 1,4 | Yashi - 2,4)
 1) Client Loads ofc-Schedule/ & press "a" in Keyboard. Client will be asked to enter number 'N' & text 'C'. Now, the loop will iterate on C for checking N months.<br>
 <b>Eg:</b> Client press 'a' & then popup occurs. Client enters '3{space}mumbai'. The loop will start for iterating mumbai in OFC. It will check dates for next 3 months. <br>
-<b>Detailed - Flow :</b> Select value from city dropdown >> check wether the calendar is available or not >> If its available, start calnedar loop & check for dates.(i.e. check synchronously) >> Sometimes, few city will have no calendar. In such situations, the calendar loop should not start. >> Once the Calendar is checked / we came to know that the calendar doesn't exist, then reset City dropdown. >> Now again, the 2nd iteration will start and city will be selected... (Now onwards, no need to ask the value of N & C. Ask only value once).
-2) Similar to 1 but design it for consular-schedule/. Don't reset city if you don't find calendar. Directly move to next city.
+<b>Detailed - Flow :</b> Select value from city dropdown >> check wether the calendar is available or not >> If its available, start calnedar loop & check for dates.(i.e. check synchronously) >> Sometimes, few city will have no calendar. In such situations, the calendar loop should not start. >> Once the Calendar is checked / we came to know that the calendar doesn't exist, then reset City dropdown. >> Now again, the 2nd iteration will start and city will be selected... (Now onwards, no need to ask the value of N & C. Ask only value once).<hr>Solution : See 'of.js' (OFC-Fixed.js)<hr>
+2) Similar to 1 but design it for consular-schedule/. Don't reset city if you don't find calendar. Directly move to next city.<hr>Solution : See 'cf.js' (Consular-Fixed.js)<hr>
 3) Client Loads ofc-Schedule/ & press "a" in keyboard. Client will be asked to enter number 'N'. Now, the loop will iterate on all city for N times.<br>
 <b>Eg:</b> Client press 'a' & then popup occurs. Client enters '3'. The 1st City is selected from dropdown & then 3 Months Dates are checked. If not found, reset the city to Null. Now select the 2nd City...<br>
-<b>Detailed - Flow :</b> Select 1st city from Dropdown >> Check for Calendar availability >> As calendar loads, check for N months dates. >> If dates not found, then reset the calendar to Null / (0th value). Now select 2nd city from Dropdown....
+<b>Detailed - Flow :</b> Select 1st city from Dropdown >> Check for Calendar availability >> As calendar loads, check for N months dates. >> If dates not found, then reset the calendar to Null / (0th value). Now select 2nd city from Dropdown....<hr>Solution : See 'or.js' (OFC-Random.js)<hr>
 4) Client Loads consular-Schedule/ & press "a" in keyboard. Client will be asked to enter number 'N'. Now, the loop will iterate on all city for N times.<br>
 <b>Eg:</b> Client press 'a' & then popup occurs. Client enters '3'. The 1st City is selected from dropdown & then 3 Months Dates are checked. If not found, reset the city to Null. Now select the 2nd City...<br>
-<b>Detailed - Flow :</b> Select 1st city from Dropdown >> Check for Calendar availability >> As calendar loads, check for N months dates. >> If dates not found, then directly move to 2nd City & check for calendar availability....<br><hr>
+<b>Detailed - Flow :</b> Select 1st city from Dropdown >> Check for Calendar availability >> As calendar loads, check for N months dates. >> If dates not found, then directly move to 2nd City & check for calendar availability....<br><hr>Solution : See 'cr.js' (Consular-Random.js)<hr>
 
 <b>Note :</b> When Dates are available, wait for time slots. As soon as time slots appear, select 1st & wait for submit button to be enabled. Click submit button & play notification sound. (Never click submit button. Comment code for it. Just find button & its different state like Enabled/Disabled.)<br>
 <b>Challenege :</b> To find the Calendar is Loading or it is Null. And everything should be synchronously performed.
