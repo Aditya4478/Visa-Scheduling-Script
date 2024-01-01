@@ -52,15 +52,22 @@ function checkCity(m){
         return new Promise((resolve, reject) => {
             function checkDatepickerClass() {
             let datepicker = document.getElementById('datepicker');
+                if(eventListnerFlag == 1){
+                    eventListnerFlag = 0;
+                    //console.log("Event Key Listner added");
+                    document.addEventListener("keydown", function (event) {
+                        if (event.key === "e" || event.key === "E") {
+                            waitForDatepickerClass = null
+                            checkCity = null;
+                            alert("User terminated script before dates found...");
+                        }
+                    });
+                }
                 //let nullDates = document.getElementById('datepicker').value;
                 if(document.getElementById('datepicker').value == ''){
-                    if(cityIndex < 6){
-                        cityIndex++;
-                        checkCity(cityIndex);
-                    }
+                    checkCity(m);
                     reject();
-                }
-                if (datepicker && datepicker.classList.contains('hasDatepicker')) {
+                }else if (datepicker && datepicker.classList.contains('hasDatepicker')) {
                     // Datepicker has the specified class
                     //console.log('Datepicker has the "hasDatepicker" class');
                     resolve();
@@ -132,11 +139,6 @@ function checkCity(m){
                                 $('#datepicker').datepicker('hide');
 
                                 if (greenDays.length === 0) {
-                                    // Select the first option in the city_dropdown - that is reseting all values
-
-                                    city_dropdown.selectedIndex = 0;
-                                    city_dropdown.dispatchEvent(new Event("change"));
-
                                     datepicker = undefined;
                                     calendarContainer = undefined;
                                     nextButton = undefined;
@@ -162,6 +164,7 @@ function checkCity(m){
                 if (event.key === "e" || event.key === "E") {
                     clearInterval(intervalId);
                     checkCity = null;
+                    waitForDatepickerClass = null
                     alert("User terminated script before dates found...");
                 }
             });
