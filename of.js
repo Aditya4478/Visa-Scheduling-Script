@@ -66,7 +66,6 @@ function checkCity(m){
                 //let nullDates = document.getElementById('datepicker').value;
                 if(document.getElementById('datepicker').value == ''){
                     checkCity(m);
-                    reject();
                 }else if (datepicker && datepicker.classList.contains('hasDatepicker')) {
                     // Datepicker has the specified class
                     //console.log('Datepicker has the "hasDatepicker" class');
