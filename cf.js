@@ -115,8 +115,8 @@ function checkCity(m){
                                 // Clicking submit button
                                 let submitButton = document.getElementById('submitbtn');
                                 if (submitButton.attributes[6] === undefined) {
-                                    // submitButton.click();
-                                    alert("Submit button clicked");
+                                    submitButton.click();
+                                    //alert("Submit button clicked");
                                     clearInterval(intervalId1);
                                 }
                             }
