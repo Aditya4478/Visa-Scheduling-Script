@@ -121,7 +121,7 @@ function checkCity(m){
                                 }
                             }
                         }
-                        let intervalId1 = setInterval(selectFirstTimeSlot, 1000);
+                        let intervalId1 = setInterval(selectFirstTimeSlot, 500);
                     } else {
                         //There are no green days in the calendar
                         //Get a reference to the "Next" button
@@ -173,7 +173,7 @@ function checkCity(m){
             });
         }
         // Call the function for the first time
-        let intervalId = setInterval(checkMonthAndClickNext, 1000);
+        let intervalId = setInterval(checkMonthAndClickNext, 500);
         }).catch((error) => {
         console.error('Error waiting for datepicker class:', error);
         });
