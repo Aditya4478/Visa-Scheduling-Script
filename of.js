@@ -120,7 +120,7 @@ function checkCity(m){
                             if (submitButton.attributes[6] === undefined) {
                                 submitButton.click();
                                 console.log("Submit button clicked");
-                                //clearInterval(intervalId1);
+                                clearInterval(intervalId1);
                             }
                         }
                         let intervalId1 = setInterval(selectFirstTimeSlot, 1000);
