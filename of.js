@@ -106,21 +106,19 @@ function checkCity(m){
                             }
                         }
                         // Selecting first "time-slots" after date is selected.
-                        let timeSelected = 0;
                         function selectFirstTimeSlot() {
-                            if (timeSelected == 0){
-                                let firstRadioButton = document.querySelector('input[name="schedule-entries"]:first-of-type');
-                                if (firstRadioButton) {
-                                    firstRadioButton.click();
-                                    timeSelected = 1;
-                                    console.log("First time slot selected");
-                            }
-                            // Clicking submit button
-                            let submitButton = document.getElementById('submitbtn');
-                            if (submitButton.attributes[6] === undefined) {
-                                submitButton.click();
-                                console.log("Submit button clicked");
-                                clearInterval(intervalId1);
+                            let firstRadioButton = document.querySelector('input[name="schedule-entries"]:first-of-type');
+                            if (firstRadioButton) {
+                                firstRadioButton.click();
+                                console.log("First time slot selected");
+
+                                // Clicking submit button
+                                let submitButton = document.getElementById('submitbtn');
+                                if (submitButton.attributes[6] === undefined) {
+                                    submitButton.click();
+                                    console.log("Submit button clicked");
+                                    clearInterval(intervalId1);
+                                }
                             }
                         }
                         let intervalId1 = setInterval(selectFirstTimeSlot, 1000);
